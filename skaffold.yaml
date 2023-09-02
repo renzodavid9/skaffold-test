@@ -6,3 +6,13 @@ build:
 manifests:
   rawYaml:
   - k8s-pod.yaml
+
+customActions:
+  - containers: 
+      - image: image1
+        name: container1
+    name: a1
+    executionMode:
+      kubernetesCluster:
+        overrides: "{name: \"renzo\"}"
+        jobManifestPath: ./job.yaml
