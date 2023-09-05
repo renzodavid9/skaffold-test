@@ -1,5 +1,6 @@
-apiVersion: skaffold/v4beta7
+apiVersion: skaffold/v4beta6
 kind: Config
 requires:
-- googleCloudStorage:
-    source: gs://remote-repo-tests/*
+- git:
+    repo: https://github.com/renzodavid9/skaffold-test
+    ref: main
